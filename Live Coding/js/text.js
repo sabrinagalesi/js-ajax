@@ -1,0 +1,1 @@
+/* (1) Gioca contro il PC a chi ha il numero più grande */
