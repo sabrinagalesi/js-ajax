@@ -1,0 +1,43 @@
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#title{
+    font-size: 30px;
+    padding: 100px;
+}
+
+#contenitor-square{
+    width: 600px;
+    height: 600px;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    float: left;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.green{
+    background: green;
+}
+
+.yellow{
+    background: yellow;
+}
+
+.numeroAjax{
+    font-size: 20px;
+}
