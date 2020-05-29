@@ -10,11 +10,16 @@ body{
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    background-image: url(https://wallpaperplay.com/walls/full/b/8/c/132126.jpg);
+    background-repeat: no-repeat;
 }
 
 #title{
     font-size: 30px;
     padding: 100px;
+    color: white;
+    text-shadow: 5px 5px black;
+    font-weight: bolder;
 }
 
 #contenitor-square{
@@ -27,20 +32,26 @@ body{
     height: 100px;
     float: left;
     border: 1px solid black;
+    background: white;
     cursor: pointer;
     font-size: 20px;
     text-align: center;
     line-height: 100px;
+    overflow: hidden;
 }
 
-.green{
-    background: green;
+#killia{
+    width: 250px;
+    margin-left: -75px;
+    margin-top: -25px;
 }
 
-.yellow{
-    background: yellow;
+#seraphina{ 
+    width: 300px;
+    margin-left: -110px;
 }
 
-.orange{
-    background: orange;
+#prinny{
+    width: 200px;
+    margin-left: -50px;
 }
