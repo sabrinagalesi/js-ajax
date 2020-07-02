@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contenitor-span{
+    width: 70%;
+    height: 100px;
+    text-align: center;
+}
+
+.title{
+    font-size: 30px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+#contenitor-square{
+    width: 80%;
+    height: 70%;
+    display: flex;
+}
+
+.square{
+    width: 50%;
+    height: 100%;
+}
+
+.red{
+    background: red;
+}
+
+.green{
+    background: green;
+}
