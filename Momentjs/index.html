@@ -7,7 +7,7 @@
         <meta name="description" content="Impariamo Java...Script xD">
         <meta name="author" content="Sabry">
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Romanesco&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap" rel="stylesheet"> 
         <script
 			  src="https://code.jquery.com/jquery-3.5.0.min.js"
 			  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
@@ -16,6 +16,41 @@
         <script type="text/javascript" src="js/text.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/it.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
     </head>
-    <body></body>
+    <body>
+        <div id="contenitor-calendar">
+            <div id="top-page">
+                <img id="back" src="https://cdn4.iconfinder.com/data/icons/arrows-245/24/Back-Arrow-Left-chevron-512.png"/>
+                <span id="month">
+                    Gennaio
+                </span>
+                <img id="next" src="https://cdn4.iconfinder.com/data/icons/arrows-245/24/Back-Arrow-Left-chevron-512.png"/>
+            </div>
+            <div id="contenitor-days">
+                <div class="day">
+                    Lunedì
+                </div>
+                <div class="day">
+                    Martedì
+                </div>
+                <div class="day">
+                    Mercoledì
+                </div>
+                <div class="day">
+                    Giovedì
+                </div>
+                <div class="day">
+                    Venerdì
+                </div>
+                <div class="day">
+                    Sabato
+                </div>
+                <div class="day">
+                    Domenica
+                </div>
+            </div>
+        </div>
+        <script id="template-calendar" type="text/x-handlebars-template"></script>
+    </body>
 </html>

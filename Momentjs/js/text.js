@@ -8,19 +8,25 @@ $(document).ready(function(){
         var numeroGiorni = moment("2018-" + x + "", "YYYY-MM").daysInMonth(); //Così ottengo il numero dei giorni di ogni mese dell'anno
         giorniMese.push(numeroGiorni);
     } 
-    console.log(giorniMese);
+
     for(var y = 1; y <= giorniMese[0]; y++){
-        var giorno= moment("2018-01-" + y + "").format("dddd YYYY-MM-DD"); // Così ottengo ogni signolo giorno del mese di gennaio con relatvi giorni
-        console.log(giorno);
+        var gennaio = moment("2018-01-" + y + "").format("dddd YYYY-MM-DD"); // Così ottengo ogni signolo giorno del mese di gennaio con relatvi giorni
+        console.log(gennaio);
     } 
+
     $.ajax({
         url: "https://flynn.boolean.careers/exercises/api/holidays?year=2018&month=0",
         success: function(success){
             var festività = success.response;
             console.log(festività) // Così ottengo i giorni festivi di gennaio
+            for(var a=0; a<festività.length; a++){
+                console.log(festività[a].date); //Così ottengo la data singola della festività
+            }
         },
         error: function(error){
             console.log(error);
         }
     })
+
+
 })
