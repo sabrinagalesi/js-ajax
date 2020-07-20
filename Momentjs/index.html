@@ -22,10 +22,8 @@
         <div id="contenitor-calendar">
             <div id="top-page">
                 <img id="back" src="https://cdn4.iconfinder.com/data/icons/arrows-245/24/Back-Arrow-Left-chevron-512.png"/>
-                <span id="month">
-                    Gennaio
-                </span>
-                <img id="next" src="https://cdn4.iconfinder.com/data/icons/arrows-245/24/Back-Arrow-Left-chevron-512.png"/>
+            <span id="month"></span>
+            <img id="next" src="https://cdn4.iconfinder.com/data/icons/arrows-245/24/Back-Arrow-Left-chevron-512.png"/>
             </div>
             <div id="contenitor-days">
                 <div class="day">
@@ -50,7 +48,12 @@
                     Domenica
                 </div>
             </div>
+            <div id="contenitor-box"></div>
         </div>
-        <script id="template-calendar" type="text/x-handlebars-template"></script>
+        <script id="template-calendar" type="text/x-handlebars-template">
+            <div class="box-day" data-date="{{date}}">
+                {{giorno}}
+            </div>
+        </script>
     </body>
 </html>
