@@ -10,14 +10,19 @@ $(document).ready(function(){
 
 
         var giorniMese = moment("2018-" + numeroMese + "", "YYYY-MM").daysInMonth(); //Così ottengo il numero dei giorni di gennaio
-        console.log(numeroMese);
 
 
         var dayBox = $("#template-calendar").html(); // Queste due righe servono a copiare il template dei box con dentro i giorni del mese
         var boxCompile = Handlebars.compile(dayBox); //
-
-        var giornoSettimana = moment("2018-" + numeroMese + "-01", "YYYY-MM-DD").format("e ddd");
-        console.log(giornoSettimana);
+        var giornoSettimana = moment("2018-" + numeroMese + "-01", "YYYY-MM-DD").format("e");
+        var voidBox = {
+            giorno : "",
+            date : "",
+        }
+        var voidAppend = boxCompile(voidBox);
+        for(var w = 0; w < giornoSettimana; w++){
+            $("#contenitor-box").append(voidAppend);
+        }
 
         for(var y = 1; y <= giorniMese; y++){
             var meseCorrente = moment("2018-" + numeroMese + "-" + y + "").format("YYYY-MM-DD"); // Così ottengo ogni signolo giorno del mese di gennaio con relatvi giorni
@@ -38,7 +43,6 @@ $(document).ready(function(){
             success: function(success){
                 var festività = success.response; // Così ottengo i giorni festivi di gennaio
                 for(var a=0; a<festività.length; a++){ //Così ottengo la data singola della festività
-                    console.log(festività[a].date);
                     var giornoSelezionato = $(".box-day[data-date='"+ festività[a].date +"']");
                     /*$(".box-day").each(function(){
                         var box = $(this).attr("data-date");
@@ -60,13 +64,22 @@ $(document).ready(function(){
     
 
     $("#next").click(function(){
-        numeroMese++;
-        $(".box-day").remove();
+        if(numeroMese == 12){
+            numeroMese = 1;
+        } else {
+            numeroMese++;
+        }
+        $(".box-day").remove();    
         mese(numeroMese);
+        
     })
 
     $("#back").click(function(){
-        numeroMese--;
+        if(numeroMese == 1){
+            numeroMese = 12;
+        } else{
+            numeroMese--;
+        }
         $(".box-day").remove();
         mese(numeroMese);
     })
